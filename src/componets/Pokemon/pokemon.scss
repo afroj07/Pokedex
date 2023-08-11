@@ -1,0 +1,24 @@
+.pokemon{
+    margin: 1rem auto;
+    flex-basis: 20%;
+    letter-spacing: 5px;
+
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    >div{
+        margin-top: 1rem;
+        font-size: larger;
+        font-weight: 500;
+    >img{
+        height: 200px;
+        width: 200px;
+        &:hover{
+            background-color: antiquewhite;
+          cursor: pointer;
+        }
+    }
+}
+
+}

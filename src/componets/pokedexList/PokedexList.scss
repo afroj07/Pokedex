@@ -1,3 +1,31 @@
 .pokemon-list-wrapper{
-    margin:0 auto;
+    margin:1rem auto;
+    >.pokemon-wrapper{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    >.pokedexList{
+        display: flex;
+       font-size: larger;
+       font-weight: 600;
+       letter-spacing: 3px;
+        justify-content: center;
+        align-items: center;
+        background-color: antiquewhite;
+    }
+    >div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    >button{
+       padding: 10px 15px;
+       margin: 0.5rem;
+       &:hover{
+        background-color: rgb(226, 178, 160);
+        cursor: pointer;
+        border-radius: 5px;
+       }
+    }
+    }
 }

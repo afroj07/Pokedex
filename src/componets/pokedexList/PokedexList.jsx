@@ -39,10 +39,17 @@ const Pokedesx_URL='https://pokeapi.co/api/v2/pokemon'
        
   return (
     <div className='pokemon-list-wrapper'>
-      <div>PokedexList</div>
-    {(isLoading)? 'Loading...':pokemonList.map((p)=>
+     <div className='pokedexList'>PokedexList</div>
+     <div className='pokemon-wrapper'>
+     {(isLoading)? 'Loading...':pokemonList.map((p)=>
     <Pokemon name={p.name} await image={p.image} key={p.id}/>)
-    }   </div>
+    }  
+     </div>
+     <div className='btn'>
+      <button>prev</button>
+      <button>next</button>
+     </div>
+   </div>
   )
 }
 
