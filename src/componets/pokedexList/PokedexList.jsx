@@ -48,7 +48,7 @@ const PokedexList = () => {
      <div className='pokedexList'>PokedexList</div>
      <div className='pokemon-wrapper'>
      {(isLoading)? 'Loading...':pokemonList.map((p)=>
-    <Pokemon name={p.name} await image={p.image} key={p.id}/>)
+    <Pokemon name={p.name} await image={p.image} key={p.id} id={p.id} />)
     }  
      </div>
      <div className='btn'>
