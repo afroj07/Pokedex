@@ -3,3 +3,8 @@
     padding: 0px;
     box-sizing: border-box;
 }
+.heading{
+    margin: 1rem auto;
+   text-align: center;
+    letter-spacing: 5px;
+}

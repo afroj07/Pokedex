@@ -39,7 +39,6 @@ const PokedexList = () => {
           setIsLoading(false);
      }
     useEffect(()=>{
-      console.log('effect called')
  downloadpokemons();
     },[Pokedesx_URL]);
        
