@@ -1,7 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-
 import './PokemonDetails.scss'
 const PokemonDetails = () => {
   const {id} = useParams();
@@ -23,13 +22,14 @@ const PokemonDetails = () => {
   }, []);
   return (
     <div className='pokemondetails'>
-   <div> name:{Pokemon.name}</div>
+      <div><div> Name:{Pokemon.name}</div>
    <div><img src={Pokemon.image} alt="image1" /></div>
-   <div> height: {Pokemon.height}</div>
-   <div> weight: {Pokemon.weight}</div>
+   <div> Height: {Pokemon.height}</div>
+   <div> Weight: {Pokemon.weight}</div>
    <div>
-    type:{Pokemon.types}
-   </div>
+    Type:{Pokemon.types}
+   </div></div>
+   
    </div>
   )
 }

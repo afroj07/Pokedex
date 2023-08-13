@@ -1,0 +1,28 @@
+.pokemondetails{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+flex-direction: column;
+    >div{
+width: 50%;
+height: auto;
+border: 3px solid rgb(61, 70, 60);
+border-radius: 5px;
+text-align: center;
+padding: 2rem 0;
+font-size: larger;
+font-weight: 600;
+letter-spacing: 2px;
+background-color: rgb(245, 228, 228);
+
+    >div{
+        margin: 1rem;
+        >img{
+            height: 200px;
+            width: 200px;
+        }
+    }
+}
+}

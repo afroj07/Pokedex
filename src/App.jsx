@@ -9,7 +9,6 @@ function App() {
   return(
   <>
    <Router>
-   <h1 className='heading'>Pokedex</h1>
     <Routes>
       <Route path='/' element={<Pokedex/>}/>
       <Route path='/pokemon/:id' element={<PokemonDetails/>}/>

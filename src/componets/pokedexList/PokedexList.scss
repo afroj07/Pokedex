@@ -12,7 +12,9 @@
        letter-spacing: 3px;
         justify-content: center;
         align-items: center;
-        background-color: antiquewhite;
+        >h3{
+       border-bottom: 2px solid gray;
+        }
     }
     >div{
         display: flex;
