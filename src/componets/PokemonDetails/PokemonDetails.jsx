@@ -1,37 +1,37 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams } from "react-router-dom";
+import usePokemonDetails from "../../hooks/usePokemonDetails";
 import './PokemonDetails.scss'
-const PokemonDetails = () => {
-  const {id} = useParams();
-  const [Pokemon, setPokemon]= useState({});
-  async function downloadPokemon() {
-    const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
-    console.log( response.data);
-    setPokemon({
-      name:response.data.name,
-      image:response.data.sprites.other.dream_world.front_default,
-      weight:response.data.weight,
-      height:response.data.height,
-      types: response.data.types.map((t)=>t.type.name)
-    });
-    console.log( response.data);
-  }
-  useEffect(()=>{
-    downloadPokemon();
-  }, []);
-  return (
-    <div className='pokemondetails'>
-      <div><div> Name:{Pokemon.name}</div>
-   <div><img src={Pokemon.image} alt="image1" /></div>
-   <div> Height: {Pokemon.height}</div>
-   <div> Weight: {Pokemon.weight}</div>
-   <div>
-    Type:{Pokemon.types}
-   </div></div>
-   
-   </div>
-  )
+function PokemonDetails({ pokemonName }) {
+    const {id} = useParams();
+    const [pokemon] = usePokemonDetails(id, pokemonName);
+    return (
+        <div className="pokemon-details-wrapper">
+          <div>
+
+          <img className="pokemon-details-image" src={pokemon.image} />
+            <div className="pokemon-details-name"><span> Name: {pokemon.name}</span></div>
+            <div className="pokemon-details-name">Height: {pokemon.height}</div>
+            <div className="pokemon-details-name">Weight: {pokemon.weight}</div>
+            <div className="pokemon-details-types">
+              Type:{pokemon.types && pokemon.types.map((t) => <div key={t}> {t} </div>)} 
+              <hr />
+            </div>
+
+            {
+                pokemon.types && pokemon.similarPokemons && 
+                <div>
+                    more {pokemon.types[0]} type pokemons
+
+                    <ul>
+                        {pokemon.similarPokemons.map((p) => <li key={p.pokemon.url}>{p.pokemon.name}</li>)}
+
+                    </ul>
+                </div>
+            }
+          </div>
+            
+        </div>
+    );
 }
 
-export default PokemonDetails
+export default PokemonDetails;

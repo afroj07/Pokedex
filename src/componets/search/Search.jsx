@@ -1,9 +1,14 @@
 import React from 'react'
 import './Search.scss'
-const Search = () => {
+const Search = ({updateSearchTerm}) => {
   return (
     <div className='search-wrapper'>
- <input  type='text' placeholder='pokemon name..'/>
+ <input 
+ id='pokemon-name-search'
+  type='text'
+  placeholder='pokemon name..'
+  onChange={(e)=>updateSearchTerm(e.target.value)}
+  />
     </div>
   )
 }

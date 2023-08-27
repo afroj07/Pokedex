@@ -1,8 +1,9 @@
-.pokemondetails{
+.pokemon-details-wrapper{
     width: 100%;
     height: 100vh;
     display: flex;
     align-items: center;
+    margin-top: 2rem ;
 
 flex-direction: column;
     >div{
@@ -15,14 +16,16 @@ padding: 2rem 0;
 font-size: larger;
 font-weight: 600;
 letter-spacing: 2px;
-background-color: rgb(245, 228, 228);
+background-color: rgb(255, 255, 255);
 
-    >div{
-        margin: 1rem;
         >img{
             height: 200px;
             width: 200px;
         }
+        li{
+            list-style: none;
+            padding: 5px;
+        }
     }
-}
+     
 }

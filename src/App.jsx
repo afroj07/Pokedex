@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Pokedex from './componets/pokedex/Pokedex'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
-import PokemonDetails from './componets/PokemonDetails/PokemonDetails'
+import PokemonDetails from './componets/PokemonDetails/PokemonDetails.jsx'
 
 function App() {
  
