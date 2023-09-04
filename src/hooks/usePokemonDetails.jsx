@@ -22,7 +22,7 @@ function usePokemonDetails(id, pokemonName) {
             });
             setPokemonListState({...pokemonListState, type: response.data.types ? response.data.types[0].type.name : '' })
         } catch(error) {
-            console.log('something went')
+            console.log('something went wrong')
         }
         
     } 
